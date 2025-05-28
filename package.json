@@ -1,0 +1,29 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start:dev": "tsnd --respawn --clear src/main.ts",
+    "build": "rimraf /dist && tsc",
+    "start": "npm run build && node ./dist/main.js"
+  },
+  "keywords": [
+    "backend",
+    "nodejs",
+    "typescript"
+  ],
+  "author": "Polanco, Nunez, Soto",
+  "license": "ISC",
+  "description": "Sistema de Turismo",
+  "devDependencies": {
+    "@types/express": "^5.0.2",
+    "@types/node": "^22.15.19",
+    "rimraf": "^6.0.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "mongoose": "^8.15.0"
+  }
+}
