@@ -1,4 +1,4 @@
-import mongoose, { Schema } from "mongoose";
+import mongoose, { Schema, Types } from "mongoose";
 
 const TransportSchema = new Schema({
     name: {
@@ -10,7 +10,8 @@ const TransportSchema = new Schema({
         required: [true, "Missing routes"],
     },
     stops: {
-        type: [String],
+        type: [Types.ObjectId],
+        ref: "Stop",
         required: [true, "Missing stops"],
     },
 

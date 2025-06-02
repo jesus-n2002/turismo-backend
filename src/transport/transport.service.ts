@@ -22,7 +22,7 @@ export class TransportService {
 
     async findAll() {
         try {
-            const users = await TransportModel.find();
+            const users = await TransportModel.find().populate("stops");
 
             return users
         } catch (error) {
